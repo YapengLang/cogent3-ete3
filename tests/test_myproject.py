@@ -1,5 +1,7 @@
 from pathlib import Path
+
 import pytest
+
 from click.testing import CliRunner
 
 from myproject.cli import demo_echo, demo_log

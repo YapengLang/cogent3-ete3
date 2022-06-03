@@ -1,7 +1,9 @@
 from pathlib import Path
+
 import click
 
 from scitrack import CachingLogger
+
 
 __author__ = "YOUR NAME"
 __copyright__ = "Copyright 2016-2021, YOUR NAME"
@@ -46,8 +48,10 @@ _outpath = click.option(
     "-o", "--outpath", type=Path, help="the input string will be cast to Path instance"
 )
 
-
-@main.command()
+# the no_args_is_help=True means help is displayed if a
+# user doesn't provide any arguments to a subcommand.
+# Should be a click default I think!
+@main.command(no_args_is_help=True)
 @click.option(
     "-i",
     "--infile",
@@ -91,7 +95,7 @@ def _parse_csv_arg(*args):
     return args[-1].split(",")
 
 
-@main.command()
+@main.command(no_args_is_help=True)
 @click.argument("message", required=True, type=str)
 @click.option("-t", "--test", is_flag=True, help="test run")
 @_verbose
