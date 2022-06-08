@@ -1,6 +1,6 @@
 # Overview
 
-This repository contains code for a project that includes a command-line interface with a project structure that follows [best practice for Python projects](https://hynek.me/articles/testing-packaging/). The config file (`pyproject.toml`) shows the minimal information necessary to define a command-line tool where the build is controlled using [flit](https://pypi.org/project/flit). It also includes example configuration for dependencies, code-style tools ([black](https://pypi.org/project/black), [isort](https://pypi.org/project/isort)) and setting [pytest](https://pypi.org/project/pytest) options. 
+This repository contains code for a software development project that includes a command-line interface with a project structure that follows [best practice for Python projects](https://hynek.me/articles/testing-packaging/). The config file (`pyproject.toml`) shows the minimal information necessary to define a command-line tool where the build is controlled using [flit](https://pypi.org/project/flit). It also includes example configuration for dependencies, code-style tools ([black](https://pypi.org/project/black), [isort](https://pypi.org/project/isort)) and setting [pytest](https://pypi.org/project/pytest) options. 
 
 Edit `pyproject.toml` file to fit your project.
 
