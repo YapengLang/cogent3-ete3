@@ -1,8 +1,10 @@
-# Description of your project!
+# Overview
 
-Edit the pyproject.toml file to reflect organisation of your project.
+This repository contains code for a project that includes a command-line interface with a project structure that follows [best practice for Python projects](https://hynek.me/articles/testing-packaging/). The config file (`pyproject.toml`) shows the minimal information necessary to define a command-line tool where the build is controlled using [flit](https://pypi.org/project/flit). It also includes example configuration for dependencies, code-style tools ([black](https://pypi.org/project/black), [isort](https://pypi.org/project/isort)) and setting [pytest](https://pypi.org/project/pytest) options. 
 
-If you want a command line interface, those are specified under `project.scripts` section (line 31).
+Edit `pyproject.toml` file to fit your project.
+
+If you want the command-line interface, edit section `project.scripts` (line 31). (If you don't want it, just delete that section.)
 
 The `src/myproject/cli.py` presents an example of a command line application that uses `SciTrack` for logging, and `click` for specifying the interface.
 
@@ -38,10 +40,16 @@ $ nox -s test-3.10
 
 which will also generate a xml formatted coverage report. This is useful within a GitHub action for upload to codecov.
 
-or
+## Test coverage
+
+I have also included a `nox` subcommand for producing a code coverage report.
 
 ```
 $ nox -s testcov
 ```
 
 Which will produce a coverage report in html format in the top level directory.
+
+## Hack away 🤔 and enjoy 🎉!
+
+ 
