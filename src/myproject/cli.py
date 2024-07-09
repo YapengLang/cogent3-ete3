@@ -9,7 +9,7 @@ __author__ = "YOUR NAME"
 __copyright__ = "Copyright 2016-2021, YOUR NAME"
 __credits__ = ["YOUR NAME"]
 __license__ = "BSD"
-__version__ = "2020.6.5"  # A DATE BASED VERSION
+__version__ = "2024.7"  # A DATE BASED VERSION
 __maintainer__ = "YOUR NAME"
 __email__ = "YOUR@email"
 __status__ = "alpha"
@@ -33,6 +33,7 @@ _verbose = click.option(
     help="is an integer indicating number of cl occurrences",
 )
 
+
 # you can define custom parsers / validators
 def _parse_csv_arg(*args) -> list:
     return args[-1].split(",")
@@ -47,6 +48,7 @@ _names = click.option(
 _outpath = click.option(
     "-o", "--outpath", type=Path, help="the input string will be cast to Path instance"
 )
+
 
 # the no_args_is_help=True means help is displayed if a
 # user doesn't provide any arguments to a subcommand.

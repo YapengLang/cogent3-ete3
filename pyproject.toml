@@ -11,7 +11,7 @@ keywords = ["biology", "genomics", "statistics", "phylogeny", "evolution", "bioi
 readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.10"
-dependencies = ["click", "numpy", "scitrack"]
+dependencies = ["click", "numpy", "scitrack", "cogent3", "ete3"]
 classifiers = [
         "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Science/Research",
@@ -19,7 +19,7 @@ classifiers = [
         "Topic :: Scientific/Engineering :: Bio-Informatics",
         "Topic :: Software Development :: Libraries :: Python Modules",
         "Operating System :: OS Independent",
-        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.12",
     ]
 # the following are inferred from the source code
 dynamic = ["version", "description"]
