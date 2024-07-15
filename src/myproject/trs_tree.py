@@ -7,5 +7,7 @@ from ete3 import PhyloTree
 class C3ToEte3Tree:
 
     def main(self, tree: PhyloNode) -> PhyloTree:
-        newick_str = tree.get_newick(with_distances=True, with_node_names=True)
+        newick_str = tree.get_newick(
+            with_distances=True, with_node_names=True, semicolon=True, escape_name=True
+        )
         return PhyloTree(newick_str, format=1)

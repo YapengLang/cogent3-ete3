@@ -76,6 +76,7 @@ target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
+nbks
 
 # IPython
 profile_default/
@@ -130,3 +131,6 @@ dmypy.json
 
 #sys file
 .DS_Store
+
+#vscode setting
+.vscode
