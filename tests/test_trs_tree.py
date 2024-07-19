@@ -54,3 +54,11 @@ class TestsEte3ToC3Tree:
         tree_output = trs(ete_tree)
         tree_expected = load_tree("data/test_tree.newick")
         assert tree_expected.same_topology(tree_output)
+
+    def test_branch_support(self):
+        ete_tree = PhyloTree("data/test_tree_withsupport.newick", format=2)
+        expected = {node.support for node in ete_tree.traverse()}
+        trs = Ete3ToC3Tree()
+        tree = trs(ete_tree)
+        output = {node.params["support"] for node in tree.get_edge_vector()}
+        assert expected == output
