@@ -4,7 +4,7 @@ from ete3 import PhyloTree
 
 
 @define_app
-class C3ToEte3Tree:
+class cogent3_to_ete3:
     """convert a c3 tree to ete3 tree"""
 
     def _get_support(self, tree):
@@ -34,7 +34,7 @@ class C3ToEte3Tree:
 
 
 @define_app
-class Ete3ToC3Tree:
+class ete3_to_cogent3:
     """convert an ete3 tree to c3 tree"""
 
     def _get_support(self, _ete_tree):
