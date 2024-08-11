@@ -1,8 +1,8 @@
-# C3 plugin of converting to ete3 tree object
+# C3 plugin of converting to ete3 tree object plus edge colouring
 
-Develop an app that takes a cogent3 tree object and returns an ete3 "object"
+Developed an app that takes a cogent3 tree object and returns an ete3 "object"
 
-## from cogent3 to ete3 tree
+## cogent3 to ete3 tree
 ```
 from ete3_plugin import trs_tree, extension
 from cogent3 import load_tree
@@ -30,4 +30,6 @@ user can add legend of matrix categories to the plot
 cl.add_legend(t)
 ```
 
-![Tree Plot](data/coloured_tree.pdf)
+will get:
+
+![Tree Plot](data/coloured_tree.png)
