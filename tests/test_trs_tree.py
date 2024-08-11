@@ -1,8 +1,16 @@
-from cogent3 import load_aligned_seqs, load_tree
+from cogent3 import load_aligned_seqs, load_tree, make_tree
 from ete3 import PhyloTree
 from numpy import allclose, array
 
 from myproject.trs_tree import cogent3_to_ete3, ete3_to_cogent3
+
+
+def test_emtpy_branch_length_ete3():
+    tree = make_tree("(a,b,c);")
+    trs = cogent3_to_ete3()
+    ete_tree = trs(tree)
+    branch_lengths = [node.dist for node in ete_tree.traverse() if node.name]
+    assert allclose(branch_lengths, [1.0, 1.0, 1.0])
 
 
 def test_tip_names_ete3():
@@ -65,7 +73,7 @@ def test_topology_c3():
 
 def test_branch_support_c3():
     ete_tree = PhyloTree("data/test_tree_withsupport.newick", format=2)
-    expected = {node.support for node in ete_tree.traverse()}
+    expected = {node.support for node in ete_tree.traverse()}  # type: ignore
     trs = ete3_to_cogent3()
     tree = trs(ete_tree)
     output = {node.params["support"] for node in tree.get_edge_vector()}

@@ -7,6 +7,11 @@ from ete3 import PhyloTree
 class cogent3_to_ete3:
     """convert a c3 tree to ete3 tree"""
 
+    def _intrude_length(self, tree):
+        for node in tree.traverse():
+            if not node.is_root() and node.length is None:
+                node.length = 1.0
+
     def _get_support(self, tree):
         return {
             edge.name: edge.params.get("support", None)
@@ -22,6 +27,8 @@ class cogent3_to_ete3:
                 node.support = support_value
 
     def main(self, tree: PhyloNode) -> PhyloTree:
+        # handle empty branch length in c3 to satisfy the fixed format of ete3
+        self._intrude_length(tree)
         self._newick_str = tree.get_newick(
             with_distances=True, with_node_names=True, semicolon=True, escape_name=True
         )  # a newick str with no root name
