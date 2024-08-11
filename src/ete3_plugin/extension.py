@@ -35,9 +35,10 @@ class colour_edge:
 
         return ete_tree
 
-    def add_caption(self, ete_tree: PhyloTree) -> None:
+    def add_legend(self, ete_tree: PhyloTree) -> None:
         # Create a custom face for the caption
         ts = TreeStyle()
+        ts.show_leaf_name = False
         caption_label = TextFace(
             "Matrix Category:", fsize=14, fgcolor="black", ftype="Arial"
         )
