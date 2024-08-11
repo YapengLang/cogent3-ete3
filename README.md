@@ -1,6 +1,6 @@
-# C3 plugin of converting to ete3 tree object plus edge colouring
+# A plugin for converting a [cogent3](https://github.com/cogent3/cogent3) tree to ete3 tree object 
 
-Developed an app that takes a cogent3 tree object and returns an ete3 "object"
+Developed an app that takes a cogent3 `PhyloNode` then returns an ete3 `PhyloTree`, plus an app for edge colouring.
 
 ## cogent3 to ete3 tree
 ```
