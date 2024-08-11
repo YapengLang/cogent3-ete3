@@ -9,7 +9,14 @@ def test_tip_names_ete3():
     tree = load_tree("data/test_tree.newick")
     trs = cogent3_to_ete3()
     ete_tree = trs(tree)
-    assert set(tree.get_tip_names()) == set(ete_tree.get_species())
+    assert set(tree.get_tip_names()) == set(ete_tree.get_leaf_names())
+
+
+def test_tip_names_ete3_large():
+    tree = load_tree("data/test_tree_large_scale.newick")
+    trs = cogent3_to_ete3()
+    ete_tree = trs(tree)
+    assert set(tree.get_tip_names()) == set(ete_tree.get_leaf_names())
 
 
 def test_tip2tip_dist_ete3():

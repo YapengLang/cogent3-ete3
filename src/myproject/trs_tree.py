@@ -27,7 +27,7 @@ class cogent3_to_ete3:
         )  # a newick str with no root name
         self._support_values = self._get_support(tree)
         ete_tree = PhyloTree(
-            self._newick_str, format=3
+            self._newick_str, format=3, quoted_node_names=True
         )  # incoporate newick str into ete3 as indicated by `format`
         self._apply_support(ete_tree)
         return ete_tree

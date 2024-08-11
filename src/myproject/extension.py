@@ -25,8 +25,8 @@ class colour_edge:
                 # add colour
                 style = NodeStyle()
                 style["hz_line_color"] = McatColour[self.mapping[node.name]].value
-                style["vt_line_color"] = McatColour[self.mapping[node.name]].value
-                style["vt_line_width"] = 2
+                # style["vt_line_color"] = McatColour[self.mapping[node.name]].value
+                # style["vt_line_width"] = 2
                 style["hz_line_width"] = 2
                 node.set_style(style)
                 node.set_style(style)
