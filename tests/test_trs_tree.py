@@ -2,7 +2,7 @@ from cogent3 import load_aligned_seqs, load_tree, make_tree
 from ete3 import PhyloTree
 from numpy import allclose, array
 
-from ete3_plugin.trs_tree import cogent3_to_ete3, ete3_to_cogent3
+from cogent3_ete3.trs_tree import cogent3_to_ete3, ete3_to_cogent3
 
 
 def test_emtpy_branch_length_ete3():
