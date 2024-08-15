@@ -4,7 +4,7 @@ Developed an app that takes a cogent3 `PhyloNode` then returns an ete3 `PhyloTre
 
 ## cogent3 to ete3 tree
 ```
-from ete3_plugin import trs_tree, extension
+from cogent3_ete3 import trs_tree, extension
 from cogent3 import load_tree
 
 tree = load_tree("data/tree_large_scale.newick")
