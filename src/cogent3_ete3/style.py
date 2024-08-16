@@ -3,7 +3,7 @@ from ete3 import NodeStyle, PhyloTree, TextFace, TreeStyle
 
 
 @define_app
-class colour_edge:
+class ete3_colour_edge:
     """colour certain edges based on a edge mapping"""
 
     def __init__(

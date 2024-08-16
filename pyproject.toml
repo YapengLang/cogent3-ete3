@@ -82,3 +82,8 @@ lines_after_imports=2
 lines_between_types=1
 multi_line_output=3
 use_parentheses=true
+
+[project.entry-points."cogent3.app"]
+cogent3_to_ete3 = "cogent3_ete3.interconvert:cogent3_to_ete3"
+ete3_to_cogent3 = "cogent3_ete3.interconvert:ete3_to_cogent3"
+ete3_colour_edge = "cogent3_ete3.style:ete3_colour_edge"
