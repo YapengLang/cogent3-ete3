@@ -4,12 +4,12 @@ Developed an app that takes a cogent3 `PhyloNode` then returns an ete3 `PhyloTre
 
 ## cogent3 to ete3 tree
 ```
-from cogent3_ete3 import interconvert, style
-from cogent3 import load_tree
+from cogent3 import load_tree, get_app
+from cogent3_ete3.style import show_legend
 
 tree = load_tree("data/tree_large_scale.newick")
 
-conv = interconvert.cogent3_to_ete3()
+conv = get_app("cogent3_to_ete3")
 t = conv(tree)
 ```
 
@@ -25,14 +25,14 @@ cat_to_colour={"limit":"blue",
  "chainsaw":"red", 
  "identity":"yellow"}
 
-cl = extension.colour_edge(edge_to_cat, cat_to_colour)
+cl = get_app("ete3_colour_edge", edge_to_cat=mcats, cat_to_colour=cat_to_colour)
 t = cl(t)
 ```
 
 user can add legend of matrix categories to the plot
 
 ```
-style.show_legend(t, cat_to_colour, legend_title="Matrix Category")
+show_legend(t, cat_to_colour, legend_title="Matrix Category")
 ```
 
 will get:
