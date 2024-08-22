@@ -14,6 +14,7 @@ def test(session):
     session.run(
         "pytest",
         "-x",
+        *session.posargs,
     )
 
 
