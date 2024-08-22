@@ -30,7 +30,7 @@ cat_to_colour={"A":"blue",
  "C":"red", 
  "D":"yellow"}
 
-cl = get_app("ete3_colour_edge", edge_to_cat=mcats, cat_to_colour=cat_to_colour)
+cl = get_app("ete3_colour_edge", edge_to_cat=edge_to_cat, cat_to_colour=cat_to_colour)
 t = cl(t)
 ```
 
