@@ -44,7 +44,7 @@ def show_legend(
     legend_font: str = "Arial",
     entry_size: int = 14,
     entry_font: str = "Arial",
-) -> None:
+) -> None:  # pragma: no cover
     # Create a custom face for the caption
     ts = TreeStyle()
     ts.show_leaf_name = False
