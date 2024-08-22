@@ -28,7 +28,7 @@ edge_to_cat = {"Vombatidae_Vombatus_ursinus": "A",
 cat_to_colour={"A":"blue", 
  "B":"blue", 
  "C":"red", 
- "D":"yellow"}
+ "D":"orange"}
 
 cl = get_app("ete3_colour_edge", edge_to_cat=edge_to_cat, cat_to_colour=cat_to_colour)
 t = cl(t)
