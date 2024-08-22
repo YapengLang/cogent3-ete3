@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/YapengLang/cogent3-ete3/badge.svg)](https://coveralls.io/github/YapengLang/cogent3-ete3)
+
 # A plugin for converting a [cogent3](https://github.com/cogent3/cogent3) tree to ete3 tree object 
 
 Developed an app that takes a cogent3 `PhyloNode` then returns an ete3 `PhyloTree`, plus an app for edge colouring.
