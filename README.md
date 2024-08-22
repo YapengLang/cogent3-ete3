@@ -1,4 +1,4 @@
-[![Coverage Status](https://coveralls.io/repos/github/YapengLang/cogent3-ete3/badge.svg)](https://coveralls.io/github/YapengLang/cogent3-ete3)
+[![Coverage Status](https://coveralls.io/repos/github/YapengLang/cogent3-ete3/badge.svg?branch=main)](https://coveralls.io/github/YapengLang/cogent3-ete3?branch=main)
 
 # A plugin for converting a [cogent3](https://cogent3.org/) tree to [ete3](http://etetoolkit.org/) tree object 
 
