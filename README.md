@@ -40,6 +40,6 @@ You can use the convenient function to show a legend.
 show_legend(t, cat_to_colour, legend_title="Your Category")
 ```
 
-will get:
+In the pop-up window, you can explore further and render the tree in a file as you progress:
 
 ![Tree Plot](data/coloured_tree.png)
