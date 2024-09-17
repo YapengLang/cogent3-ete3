@@ -11,7 +11,7 @@ keywords = ["biology", "genomics", "statistics", "phylogeny", "evolution", "bioi
 readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.10"
-dependencies = ["cogent3", "ete3"]
+dependencies = ["cogent3", "ete3", "six", "PyQt5"]
 classifiers = [
         "Development Status :: 2 - Pre-Alpha",
         "Intended Audience :: Science/Research",
@@ -43,8 +43,6 @@ test = [
     "pytest-cov",
     "pytest-xdist",
     "nox",
-    "six",  # needed for ete3
-    "PyQt5", # needed for ete3
 ]
 dev = [
     "black",
