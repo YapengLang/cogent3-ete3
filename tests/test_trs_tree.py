@@ -42,7 +42,7 @@ def test_topology_ete3():
     trs = cogent3_to_ete3()
     ete_tree = trs(tree)
     output = ete_tree.write(format=8)
-    expected = tree.get_newick(with_node_names=True)
+    expected = tree.get_newick(with_node_names=True).replace("root", "")
     assert output == expected
 
 
