@@ -11,7 +11,7 @@ keywords = ["biology", "genomics", "statistics", "phylogeny", "evolution", "bioi
 readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.11,<3.14"
-dependencies = ["cogent3>=2025.5.8a8", "ete3", "six", "PyQt5"]
+dependencies = ["cogent3>=2025.5.8a8", "ete3", "six", "PyQt5", "standard-cgi"]
 classifiers = [
         "Development Status :: 2 - Pre-Alpha",
         "Intended Audience :: Science/Research",
