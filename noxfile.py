@@ -1,9 +1,6 @@
-import pathlib
-
 import nox
 
-
-_py_versions = range(10, 13)
+_py_versions = range(11, 14)
 
 
 @nox.session(python=[f"3.{v}" for v in _py_versions])
