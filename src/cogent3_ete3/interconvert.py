@@ -1,8 +1,7 @@
 from cogent3 import get_app, make_tree
 from cogent3.app.composable import define_app
-from cogent3.core.tree import PhyloNode
+from cogent3.core.tree import PhyloNode, TreeNode
 from ete3 import PhyloTree
-
 
 # this app sets the min branch length for branch with no length
 _fillin_length = get_app("scale_branches")
@@ -35,7 +34,7 @@ def cogent3_to_ete3(tree: PhyloNode) -> PhyloTree:
 
 
 @define_app
-def ete3_to_cogent3(ete_tree: PhyloTree) -> PhyloNode:
+def ete3_to_cogent3(ete_tree: PhyloTree) -> PhyloNode | TreeNode:
     """convert an ete3 tree to c3 tree"""
     ete_tree = ete_tree.copy()
     # assign all internal nodes names
