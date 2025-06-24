@@ -3,6 +3,7 @@ from cogent3.app.composable import define_app
 from cogent3.core.tree import PhyloNode, TreeNode
 from ete3 import PhyloTree
 
+
 # this app sets the min branch length for branch with no length
 _fillin_length = get_app("scale_branches")
 
@@ -12,9 +13,12 @@ def cogent3_to_ete3(tree: PhyloNode) -> PhyloTree:
     """convert a c3 tree to ete3 tree"""
     # handle empty branch length in c3 to satisfy the fixed format of ete3
     tree = _fillin_length(tree)
+
+    # a newick str with no root name
     newick = tree.get_newick(
         with_distances=True, with_node_names=True, semicolon=True, escape_name=True
-    )  # a newick str with no root name
+    ).replace("root", "")  # remove the root name
+    
     support = {
         edge.name: edge.params.get("support", None)
         for edge in tree.get_edge_vector(include_root=True)
