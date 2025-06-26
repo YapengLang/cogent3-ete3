@@ -36,11 +36,9 @@ def test_tip2tip_dist_ete3():
     tree = load_tree(f"{DATADIR}/test_tree.newick")
     trs = cogent3_to_ete3()
     ete_tree = trs(tree)
-    assert allclose(
-        array(ete_tree.cophenetic_matrix()[0]),
-        tree.tip_to_tip_distances()[0],
-    )
-
+    ete_matrix = array(ete_tree.cophenetic_matrix()[0])
+    c3_matrix = tree.tip_to_tip_distances().to_array()
+    assert allclose(ete_matrix, c3_matrix)
 
 def test_topology_ete3():
     tree = load_tree(f"{DATADIR}/test_tree.newick")
