@@ -1,8 +1,13 @@
-from cogent3 import load_aligned_seqs, load_tree, make_tree
+import os
+
+from cogent3 import load_tree, make_tree
 from ete3 import PhyloTree
 from numpy import allclose, array
 
 from cogent3_ete3.interconvert import cogent3_to_ete3, ete3_to_cogent3
+
+
+DATADIR = os.path.join(os.path.dirname(__file__), "data")
 
 
 def test_emtpy_branch_length_ete3():
@@ -14,21 +19,21 @@ def test_emtpy_branch_length_ete3():
 
 
 def test_tip_names_ete3():
-    tree = load_tree("data/test_tree.newick")
+    tree = load_tree(f"{DATADIR}/test_tree.newick")
     trs = cogent3_to_ete3()
     ete_tree = trs(tree)
     assert set(tree.get_tip_names()) == set(ete_tree.get_leaf_names())
 
 
 def test_tip_names_ete3_large():
-    tree = load_tree("data/test_tree_large_scale.newick")
+    tree = load_tree(f"{DATADIR}/test_tree_large_scale.newick")
     trs = cogent3_to_ete3()
     ete_tree = trs(tree)
     assert set(tree.get_tip_names()) == set(ete_tree.get_leaf_names())
 
 
 def test_tip2tip_dist_ete3():
-    tree = load_tree("data/test_tree.newick")
+    tree = load_tree(f"{DATADIR}/test_tree.newick")
     trs = cogent3_to_ete3()
     ete_tree = trs(tree)
     assert allclose(
@@ -38,7 +43,7 @@ def test_tip2tip_dist_ete3():
 
 
 def test_topology_ete3():
-    tree = load_tree("data/test_tree.newick")
+    tree = load_tree(f"{DATADIR}/test_tree.newick")
     trs = cogent3_to_ete3()
     ete_tree = trs(tree)
     output = ete_tree.write(format=8)
@@ -47,10 +52,10 @@ def test_topology_ete3():
 
 
 def test_branch_support_ete3():
-    tree = load_tree("data/test_tree_withsupport.newick")    
+    tree = load_tree(f"{DATADIR}/test_tree_withsupport.newick")
     trs = cogent3_to_ete3()
     ete_tree = trs(tree)
-    
+
     support = {
         node.name: node.params.get("support", 1.0) for node in tree.get_edge_vector()
     }
@@ -63,15 +68,15 @@ def test_branch_support_ete3():
 
 
 def test_topology_c3():
-    ete_tree = PhyloTree("data/test_tree.newick", format=5)
+    ete_tree = PhyloTree(f"{DATADIR}/test_tree.newick", format=5)
     trs = ete3_to_cogent3()
     tree_output = trs(ete_tree)
-    tree_expected = load_tree("data/test_tree.newick")
+    tree_expected = load_tree(f"{DATADIR}/test_tree.newick")
     assert tree_expected.same_topology(tree_output)
 
 
 def test_branch_support_c3():
-    ete_tree = PhyloTree("data/test_tree_withsupport.newick", format=2)
+    ete_tree = PhyloTree(f"{DATADIR}/test_tree_withsupport.newick", format=2)
     expected = {node.support for node in ete_tree.traverse()}  # type: ignore
     trs = ete3_to_cogent3()
     tree = trs(ete_tree)
