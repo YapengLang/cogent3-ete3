@@ -47,11 +47,10 @@ def test_topology_ete3():
 
 
 def test_branch_support_ete3():
-    algn = load_aligned_seqs("data/algn.fasta", moltype="protein", new_type=True)
-    tree = algn.quick_tree(bootstrap=10, show_progress=False)
+    tree = load_tree("data/test_tree_withsupport.newick")    
     trs = cogent3_to_ete3()
     ete_tree = trs(tree)
-
+    
     support = {
         node.name: node.params.get("support", 1.0) for node in tree.get_edge_vector()
     }
