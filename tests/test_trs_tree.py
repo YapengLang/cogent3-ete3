@@ -61,7 +61,7 @@ def test_branch_support_ete3():
     }
 
     assert all(
-        allclose(support[node.name], node.support)
+        allclose(support[node.name], node.support)  # type: ignore
         for node in ete_tree.traverse()
         if node.name
     )
