@@ -1,6 +1,5 @@
-[![Coverage Status](https://coveralls.io/repos/github/YapengLang/cogent3-ete3/badge.svg?branch=main)](https://coveralls.io/github/YapengLang/cogent3-ete3?branch=main)
-
 # A plugin for converting a [cogent3](https://cogent3.org/) tree to [ete3](http://etetoolkit.org/) tree object 
+[![Coverage Status](https://coveralls.io/repos/github/YapengLang/cogent3-ete3/badge.svg?branch=main)](https://coveralls.io/github/YapengLang/cogent3-ete3?branch=main)
 
 Developed an app that takes a cogent3 `PhyloNode` then returns an ete3 `PhyloTree`, plus an app for edge colouring.
 
@@ -42,4 +41,4 @@ show_legend(t, cat_to_colour, legend_title="Your Category")
 
 In the pop-up window, you can explore further and render the tree in a file as you progress:
 
-![Tree Plot](data/coloured_tree.png)
+<img src="https://figshare.com/ndownloader/files/55664936" alt="tree1" width="450" />
