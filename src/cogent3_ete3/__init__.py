@@ -1,4 +1,3 @@
-"""cogent3 plugin for ete3
-"""
+"""cogent3 plugin for ete3"""
 
-__version__ = "2024.8.22a6"
+__version__ = "2025.6.27"
