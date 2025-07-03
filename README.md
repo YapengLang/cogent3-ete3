@@ -1,6 +1,9 @@
 # A plugin for converting a [cogent3](https://cogent3.org/) tree to [ete3](http://etetoolkit.org/) tree object 
 [![Coverage Status](https://coveralls.io/repos/github/YapengLang/cogent3-ete3/badge.svg?branch=main)](https://coveralls.io/github/YapengLang/cogent3-ete3?branch=main)
 [![Release](https://github.com/YapengLang/cogent3-ete3/actions/workflows/release.yml/badge.svg?branch=main)](https://github.com/YapengLang/cogent3-ete3/actions/workflows/release.yml)
+[![DOI](https://zenodo.org/badge/826069386.svg)](https://doi.org/10.5281/zenodo.15795146)
+
+
 
 Developed an app that takes a cogent3 `PhyloNode` then returns an ete3 `PhyloTree`, plus an app for edge colouring.
 
