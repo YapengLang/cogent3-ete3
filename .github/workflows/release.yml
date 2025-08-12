@@ -72,7 +72,7 @@ jobs:
 
     steps:
       - name: Download sdist and wheel
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: c3e3-wheel-sdist
           path: ./dist
@@ -92,7 +92,7 @@ jobs:
 
     steps:
       - name: Download sdist and wheel
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: c3e3-wheel-sdist
           path: ./dist
