@@ -55,7 +55,7 @@ jobs:
         run: python -m build --wheel --sdist
 
       - name: Upload sdist and wheel
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: c3e3-wheel-sdist
           path: |
